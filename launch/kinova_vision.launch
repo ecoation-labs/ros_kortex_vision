@@ -1,7 +1,7 @@
 <launch>
 
   <!-- Node general configuration -->
-  <arg name="device" default="192.168.1.10"
+  <arg name="device" default="11.11.0.2"
         doc="Device IPv4 address" />
 
   <arg name="respawn" default="false"
@@ -92,7 +92,7 @@
     <node pkg="tf2_ros"
       type="static_transform_publisher"
       name="camera_depth_tf_publisher"
-      args="-0.0195 -0.005 0 0 0 0 camera_link $(arg depth_frame_id)" />
+      args="-0.0195 -0.005 0 1.57 3.14 1.57 camera_link $(arg depth_frame_id)" />
 
     <node pkg="tf2_ros"
       type="static_transform_publisher"
